@@ -97,10 +97,6 @@ AI tools were used to assist in improving the structure, interactivity, and docu
 
 ---
 
-## 🌐 Optional Deployment
-The project can be hosted using GitHub Pages, Netlify, or Vercel if desired.
-
----
 
 ## 👤 Author
 **Rayan**
