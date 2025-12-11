@@ -1,4 +1,4 @@
-# Personal Portfolio – Assignment 3
+# Personal Portfolio 
 
 This project is part of **Assignment 3** for the SWE course.  
 It builds on **Assignment 1 + Assignment 2**, adding advanced features such as API integration, sorting, improved state handling, and better interaction.
