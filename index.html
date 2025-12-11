@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav-continer">
+        <a class="logo" href="#about">Rayan</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#github">GitHub</a></li>
+        </ul>
+        <div class="Contols">
+          <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About Section -->
+      <section id="about" class="container-about-section">
+        <div class="about-left">
+          <img
+            src="assets/images/profile.png"
+            alt="Profile"
+            class="profile-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-right">
+          <h1 id="greeting">Hello!</h1>
+          <p class="tagline">Student • Learner • Aspiring Software Engineer</p>
+          <p>
+            Hi, I’m Rayan a junior SWE student in KFUPM. I enjoy solving
+            problems with code and building useful tools. I’m currently learning
+            AI and web development, and I will keep growing day after day.
+          </p>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects-Container">
+        <h2>Projects</h2>
+
+       
+        <div class="sort-controls">
+          <label for="sort-projects">Sort by:</label>
+          <select id="sort-projects">
+            <option value="az">Title (A → Z)</option>
+            <option value="za">Title (Z → A)</option>
+          </select>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="cpp">C++</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card fade" data-category="web">
+            <img
+              src="assets/images/pro1.png"
+              alt="Project 1"
+              loading="lazy"
+            />
+            <h3>Score Tournament Application for KFUPM Students</h3>
+            <p>
+              I built a web application to organize tournaments for KFUPM
+              students. Players can join teams and receive notifications, while
+              admins can manage tournaments, teams, approve players, and assign
+              captains.
+            </p>
+          </article>
+
+          <article class="project-card fade" data-category="cpp">
+            <img
+              src="assets/images/pro2.png"
+              alt="Project 2"
+              loading="lazy"
+            />
+            <h3>Bank Management System (C++ Application)</h3>
+            <p>
+              Developed a console-based banking system in C++ that allows users
+              to add/delete accounts, deposit/withdraw funds, and view the
+              client list.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="container section contact">
+        <h2>Contact</h2>
+        <form
+          id="contact-form"
+          action="mailto:Stark20xoogmail.com"
+          method="POST"
+          enctype="text/plain"
+        >
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <!-- GitHub API Section -->
+      <section id="github" class="github-section container">
+        <h2>Latest GitHub Repos</h2>
+
+        <div id="github-status" class="github-status" aria-live="polite">
+            Loading repositories...
+        </div>
+
+        <ul id="repo-list" class="repo-list"></ul>
+
+        <div class="github-actions">
+          <button id="retry-fetch" class="retry-btn" hidden>Retry</button>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© Rayyan — Assignments 1, 2 & 3</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

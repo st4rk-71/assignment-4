@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-continer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+.Contols button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* 
+   About Section
+*/
+.container-about-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.about-left {
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007BFF;
+}
+
+.about-right {
+    flex: 2 1 400px;
+}
+
+.about-right h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-weight: 500;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+.about-right p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* 
+   Projects Section
+ */
+.projects-Container {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-Container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #007BFF;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 
+   Contact Section
+*/
+.contact {
+    padding: 4rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #007BFF;
+}
+
+form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* 
+   Responsive Design
+ */
+@media screen and (max-width: 768px) {
+    .container-about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-right {
+        flex: unset;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.dark-theme {
+    background-color: #121212;
+    color: #f9f9f9;
+}
+
+.dark-theme .header {
+    background-color: #1f1f1f;
+}
+
+.dark-theme .project-card,
+.dark-theme .contact {
+    background-color: #1e1e1e;
+}
+/* Filter Buttons */
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  margin: 0 0.3rem;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Fade Animation */
+.fade {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* ---- Projects: Sort Controls ---- */
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 0 1.5rem 0;
+}
+
+#sort-projects {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+/* ---- GitHub Section ---- */
+.github-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.github-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007BFF;
+}
+
+.github-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.github-form label {
+  grid-column: 1 / -1;
+  font-weight: 600;
+}
+
+.github-form input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.github-form button {
+  padding: 0.6rem 1rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.github-form button:hover {
+  background-color: #0056b3;
+}
+
+.github-form .hint {
+  grid-column: 1 / -1;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.github-status {
+  min-height: 1.25rem;
+  margin: 0.25rem 0 0.75rem 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.repo-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding-left: 0;
+}
+
+.repo-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1rem;
+  display: grid;
+  gap: 0.25rem;
+  transition: transform 0.2s ease;
+}
+
+.repo-item:hover {
+  transform: translateY(-3px);
+}
+
+.repo-item a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.repo-item a:hover {
+  text-decoration: underline;
+}
+
+.repo-meta {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.github-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.retry-btn {
+  display: inline-block;
+  margin: 1rem auto 0;
+  padding: 0.6rem 1rem;
+  background: #ff5454;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Footer */
+.site-footer {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Optional container helper (used in footer + github) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---- Dark Theme for GitHub Section ---- */
+.dark-theme .repo-item {
+  background: #1e1e1e;
+}
+
+.dark-theme .github-form input {
+  background: #1f1f1f;
+  color: #eee;
+  border-color: #333;
+}
+
+.dark-theme .github-form .hint {
+  color: #aaa;
+}
+
+.github-form {
+  display: none;
+}
